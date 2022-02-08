@@ -1,0 +1,32 @@
+<!doctype html>
+<head>
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+  <meta name="google-signin-client_id" content="822838802672-akgmgc8v5i3samscg7dogk0v592oa78q.apps.googleusercontent.com">
+
+  <link rel='shortcut icon' href='/img/logo.jpg'>
+  <title>Matches</title>
+  <meta charset='utf-8'/>
+
+  <link type='text/css' rel='stylesheet' href='/CSS/viewMatches.css'>
+  <script src='/Scripts/viewMatches.js'></script>
+</head>
+
+<body>
+  <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+  <label class=text id=currentEmail>Not signed in!</label>
+  <p><a href="#" onclick="signOut();">Sign out</a></p>
+
+  <div id=navBar>
+    <button type='button' class=navButton onclick='window.location.href = "/HTML/userProfilePage.html"'>View Your Profile</button>
+    <button type='button' class=navButton onclick='window.location.href = "/HTML/profileBrowserPage.html"'>Profile Browser</button>
+    <button type='button' class=navButton onclick='window.location.reload()'>View Matches</button>
+  </div>
+
+  <div id=matchContainer>
+    <h1 class=text>Matches:</h1>
+  </div>
+  <hr>
+  <div id=requestsContainer>
+    <h1 class=text>Liked:</h1>
+  </div>
+</body>

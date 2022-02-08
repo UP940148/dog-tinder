@@ -1,0 +1,36 @@
+<!doctype html>
+<head>
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+  <meta name="google-signin-client_id" content="822838802672-akgmgc8v5i3samscg7dogk0v592oa78q.apps.googleusercontent.com">
+
+  <link rel='shortcut icon' href='/img/logo.jpg'>
+  <meta charset='utf-8'>
+  <title>Create Profile</title>
+
+  <link type='text/css' rel='stylesheet' href='/CSS/createProfile.css'>
+</head>
+
+<body>
+  <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+  <label class=text id=currentEmail>Not signed in!</label>
+
+  <form id=creationForm>
+    <h2 class=text>Create Profile:</h2>
+    <label for=name class=text minlength='1'>Dog's name:</label><br>
+    <input type=text placeholder=Name id=name></input><br><br>
+    <label for=dob class=text>Date of Birth:</label><br>
+    <input type=date id=dob></input><br><br>
+    <label for=sex class=text><u>Sex:</u></label><br>
+    <label for=male class=text>Male:</label>
+    <input type=radio name=sex value=male id=maleBtn checked></input>
+    <label for=female class=text>Female:</label>
+    <input type=radio name=sex value=female id=femaleBtn></input>
+    <br><br>
+    <button type=button onclick=submitProfile()>Submit</button>
+  </form>
+
+</body>
+
+
+
+<script src='/Scripts/createProfile.js'></script>

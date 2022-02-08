@@ -1,0 +1,93 @@
+<!doctype html>
+<head>
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+  <meta name="google-signin-client_id" content="822838802672-akgmgc8v5i3samscg7dogk0v592oa78q.apps.googleusercontent.com">
+
+  <link rel='shortcut icon' href='/img/logo.jpg'>
+  <title>User Profile</title>
+  <meta charset='utf-8'/>
+
+  <link rel=stylesheet href='/CSS/userProfile.css'>
+  <script src='/Scripts/userProfile.js'></script>
+</head>
+
+<body id=body>
+  <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+  <label class=text id=currentEmail>Not signed in!</label>
+  <br>
+
+  <div id=navBar>
+    <button type='button' class=navButton onclick='window.location.reload()'>View Your Profile</button>
+    <button type='button' class=navButton onclick='window.location.href = "/HTML/profileBrowserPage.html"'>Profile Browser</button>
+    <button type='button' class=navButton onclick='window.location.href = "/HTML/viewMatchesPage.html"'>View Matches</button>
+  </div>
+
+  <h1 class=text>Your profile pictures:</h1>
+  <section class=pictureUpload id=pic0>
+    <input type=file class=fileButton accept='image/*'/><br>
+    <img class=pictureFrame>
+  </section>
+  <section class=pictureUpload id=pic1>
+    <input type=file class=fileButton accept='image/*'/><br>
+    <img class=pictureFrame>
+  </section>
+  <section class=pictureUpload id=pic2>
+    <input type=file class=fileButton accept='image/*'/><br>
+    <img class=pictureFrame>
+  </section>
+  <section class=pictureUpload id=pic3>
+    <input type=file class=fileButton accept='image/*'/><br>
+    <img class=pictureFrame>
+  </section>
+  <section class=pictureUpload id=pic4>
+    <input type=file class=fileButton accept='image/*'/><br>
+    <img class=pictureFrame>
+  </section>
+  <br><br>
+  <section class=pictureUpload id=pic5>
+    <input type=file class=fileButton accept='image/*'/><br>
+    <img class=pictureFrame>
+  </section>
+  <section class=pictureUpload id=pic6>
+    <input type=file class=fileButton accept='image/*'/><br>
+    <img class=pictureFrame>
+  </section>
+  <section class=pictureUpload id=pic7>
+    <input type=file class=fileButton accept='image/*'/><br>
+    <img class=pictureFrame>
+  </section>
+  <section class=pictureUpload id=pic8>
+    <input type=file class=fileButton accept='image/*'/><br>
+    <img class=pictureFrame>
+  </section>
+  <section class=pictureUpload id=pic9>
+    <input type=file class=fileButton accept='image/*'/><br>
+    <img class=pictureFrame>
+  </section>
+  <br><br>
+  <h2 class=text>Bio:</h2>
+  <input type=text id=bioBox></input>
+  <button type=button id=exitBtn onclick="window.location.href = '/HTML/profileBrowserPage.html'">Go to profile browser</button>
+
+
+</body>
+
+<script>
+  // Added event listeners here to stop them failing as the script runs in the head of the page rather than the end
+  const fileButtons = document.getElementsByClassName('fileButton');
+  for (let i = 0; i < fileButtons.length; i++) {
+    fileButtons[i].addEventListener('change', handleFileSelect, false);
+  }
+
+  const pictureFrames = document.getElementsByClassName('pictureFrame');
+  for (let i = 0; i < pictureFrames.length; i++) {
+    pictureFrames[i].addEventListener('contextmenu', e => {
+      e.preventDefault();
+      deletePrevious(e.target);
+      e.target.removeAttribute('src');
+      e.target.src = '/img/';
+    })
+  }
+
+  document.getElementById('bioBox').addEventListener('change', uploadChanges);
+</script>

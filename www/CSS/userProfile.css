@@ -1,0 +1,66 @@
+body {
+  background-color : #424242;
+}
+a {
+  color : #e79f39;
+}
+.text {
+  color : #dfefff;
+}
+.pictureUpload {
+  position : relative;
+  display : inline-block;
+  width : 15vw;
+  height : auto;
+  justify-content : center;
+}
+.fileButton {
+  color : #dfefff;
+}
+.pictureFrame {
+  max-width : none;
+  max-height : none;
+  width : 15vw;
+  height : 15vw;
+  object-fit : contain;
+  border : 20px;
+  border-color : white;
+}
+#bioBox {
+  width : 70em;
+  height : 5em;
+  background-color : #601d46;
+  border-color : #e79f39;
+  border-radius : 2vmin;
+  color : #dfefff;
+}
+#exitBtn {
+  width : 20vmin;
+  height : 5vmin
+}
+#navBar {
+  background-color : #601d46;
+  position : relative;
+  width : 100%;
+  height : 10vh;
+  display : inline-flex;
+  flex-direction : row;
+  flex-wrap : nowrap;
+  justify-content : space-around;
+  border-radius : .5vmin;
+}
+.navButton {
+  background-color : #e79f39;
+  color : #dfefff;
+
+  border : none;
+  position : relative;
+  top : 10%;
+  width : 400px;
+  height : 80%;
+  flex-basis : auto;
+  flex-shrink : 1;
+  border-radius : 2vmin;
+  text-align : center;
+  font-size : 3vmin;
+}

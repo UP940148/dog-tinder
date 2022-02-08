@@ -1,0 +1,36 @@
+<!doctype html>
+<head>
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+  <meta name="google-signin-client_id" content="822838802672-akgmgc8v5i3samscg7dogk0v592oa78q.apps.googleusercontent.com">
+
+  <link rel='shortcut icon' href='/img/logo.jpg'>
+  <title>Profile Browser</title>
+  <meta charset='utf-8'/>
+
+  <link type='text/css' rel='stylesheet' href='/CSS/profileBrowser.css'>
+  <script src='/Scripts/profileBrowser.js'></script>
+</head>
+
+<body>
+  <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+  <label class=text id=currentEmail>Not signed in!</label>
+  <p><a href="#" onclick="signOut();">Sign out</a></p>
+
+  <div id=navBar>
+    <button type='button' class=navButton onclick='window.location.href = "/HTML/userProfilePage.html"'>View Your Profile</button>
+    <button type='button' class=navButton onclick='window.location.reload()'>Profile Browser</button>
+    <button type='button' class=navButton onclick='window.location.href = "/HTML/viewMatchesPage.html"'>View Matches</button>
+  </div>
+
+  <br>
+  <div id=main>
+    <button type='button' class=profileButton id=dislikeButton onclick=dislikeProfile()>Dislike</button>
+    <div id=profile>
+      <h1 class=text id=profileName>Name Here</h1>
+      <h3 class=text id=profileDOB>Date of Birth</h3>
+      <img id=profileImage alt='Profile Image' height=512 width=512 onclick='nextImage()'><br>
+      <h2 class=text id=profileBio></h2>
+    </div>
+    <button type='button' class=profileButton id=likeButton onclick=likeProfile()>Like</button>
+  </div>
+</body>
